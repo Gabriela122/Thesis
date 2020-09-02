@@ -12,7 +12,7 @@ export class Container2Component implements OnInit {
   ngOnInit(): void {
   }
 
-  @ViewChild('quadraticSolver', {static: true}) quadraticSolver: any
+  //@ViewChild('quadraticSolver', {static: true}) quadraticSolver: any
   @ViewChild('timeResolution', {static: true}) timeResolution: any
   @ViewChild('resultDisplay', {static: true}) resultDisplay: any
   @ViewChild('timeDisplay', {static: true}) timeDisplay: any

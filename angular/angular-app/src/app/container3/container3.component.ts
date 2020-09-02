@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
+
 @Component({
     selector: 'app-container3',
     templateUrl: './container3.component.html',
@@ -10,22 +11,19 @@ export class Container3Component implements OnInit {
     wyniki: any;
     time0:any;
     time1:any;
-
-    constructor() {}
-
-    ngOnInit(): void {
-       
-    }
-//powpisywac wszedzie typy
-
-
+    
     @ViewChild('prob10', {static: true}) prob10: any
     @ViewChild('prob100', {static: true}) prob100: any
     @ViewChild('prob10000', {static: true}) prob10000: any
     @ViewChild('czasFormatowania', {static: true}) czasFormatowania: any
     @ViewChild('formatowanie', {static: true}) formatowanie: any
 
-    initialization() {
+    constructor() {
+        
+    }
+
+    ngOnInit(){
+
         this.prob10.nativeElement.innerHTML = this.timePerformance(10, 100, 1000)
         this.prob100.nativeElement.innerHTML = this.timePerformance(100, 100, 1000)
         this.prob10000.nativeElement.innerHTML = this.timePerformance(10000, 100, 1000)
@@ -36,6 +34,9 @@ export class Container3Component implements OnInit {
 
         this.czasFormatowania.nativeElement.innerHTML = this.time1 - this.time0 + ' milisekund'
     }
+    
+
+    //initialization() {}
 
     losuj(rozmiar: number, zakres: number) {
         var los = []
@@ -63,7 +64,7 @@ export class Container3Component implements OnInit {
 
 
     formatowanieUI() { // siec->wylacz pamiec robocza 
-        var time0 = performance.now()
+        this.time0 = performance.now()
         let iloscPowtorzen = 10
         for (var j = 0; j < iloscPowtorzen; j++) {// zmieniac ilosc powtorzen na 10,100 i 10000
             var table = document.createElement('table')
@@ -71,13 +72,13 @@ export class Container3Component implements OnInit {
             for (var i = 0; i < 3; i++) {
                 var tr = table.insertRow()
                 var td = tr.insertCell()
-                td.appendChild(document.createTextNode(this.wyniki[i].innerText))
+                td.appendChild(document.createTextNode(this.wyniki[i].nativeElement.innerText))
                 td.style.border = '1px solid black'
             }
             this.formatowanie.nativeElement.appendChild(table)
         }
 
-        var time1 = performance.now()
+        this.time1 = performance.now()
     }
 
 }
