@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
-declare var anime: any;
-//import anime from "animejs";
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import anime from 'animejs/lib/anime.es';
+
 //import * as anime from 'animejs';
 
 @Component({
@@ -13,13 +13,10 @@ export class Container4Component implements AfterViewInit {
 
   constructor() { }
 
-  t1:any;
-  t2:any;
-  Slide:any;
-
-  //@ViewChild('slideButton', {static: true}) slideButton: any
-  @ViewChild('timeResolution', {static: true}) timeResolution: any
-
+  t1: any;
+  t2: any;
+  Slide: any;
+  time: any;
 
   ngAfterViewInit(): void {
 
@@ -41,22 +38,22 @@ export class Container4Component implements AfterViewInit {
       },
       complete: function () {
         this.t2 = performance.now()
-        this.timeResolution.nativeElement.innerHTML = this.t2 - this.t1 + ' milisekund'
+        this.time = this.t2 - this.t1 + ' milisekund'
+        debugger
+        const timeResolution: HTMLElement = document.getElementById('animationTime') as HTMLElement
+        timeResolution.innerHTML = this.time
+
       },
-      delay: function (el:number, i:number) { return i * 1000 },
-      autoplay: false
+
+      delay: function (el, i: number) { return i * 1000 },
+      autoplay: false,
+
     })
 
   }
 
-    
-
-    slideButton(){
-      this.Slide.play
-    }
-
-    //this.slideButton = this.Slide.play()
-    //this.slideButton.addEventListener('click',this.Slide.play())
-    //this.slideButton.nativeElement.onclick= Slide.play()
+  slideButton() {
+    this.Slide.play()
+  }
 
 }
