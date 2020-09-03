@@ -39,7 +39,6 @@ export class Container4Component implements AfterViewInit {
       complete: function () {
         this.t2 = performance.now()
         this.time = this.t2 - this.t1 + ' milisekund'
-        debugger
         const timeResolution: HTMLElement = document.getElementById('animationTime') as HTMLElement
         timeResolution.innerHTML = this.time
 
