@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 import './assets/style.css'
 import './components/Menu'
+import './components/Home'
+import './components/Container1'
+import './components/Container2'
+import './components/Container3'
+import './components/Container4'
 
 Vue.config.productionTip = false
 
