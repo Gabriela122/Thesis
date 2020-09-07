@@ -1,8 +1,6 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import anime from 'animejs/lib/anime.es';
 
-//import * as anime from 'animejs';
-
 @Component({
   selector: 'app-container4',
   templateUrl: './container4.component.html',
@@ -41,14 +39,10 @@ export class Container4Component implements AfterViewInit {
         this.time = this.t2 - this.t1 + ' milisekund'
         const timeResolution: HTMLElement = document.getElementById('animationTime') as HTMLElement
         timeResolution.innerHTML = this.time
-
       },
-
       delay: function (el, i: number) { return i * 1000 },
       autoplay: false,
-
     })
-
   }
 
   slideButton() {
