@@ -20,7 +20,7 @@ export default new Router({
         container1: Container1,
         container2: Container2,
         container3: Container3,
-        container4: Container4        
+        container4: Container4
       }
     }
     // {name: "Home", path: '/', component: Home}
