@@ -16,35 +16,37 @@
 </template>
 
 <script>
-var t1, t2
-timeResolution = document.querySelector('#animationTime')
+import anime from 'animejs'
+var t1
+var t2
+var timeResolution = document.querySelector('#animationTime')
 export default {
-    name: 'Container4',
-    methods: {
-        Slide = anime({
-    targets: 'div.box',
-    translateX: [
-      { value: 200, duration: 500 },
-      { value: 0, duration: 500 }
-    ],
-    rotate: {
-      value: '1turn',
-      easing: 'easeInOutSine'
-    },
-    borderRadius: ['0%', '50%'],
-    easing: 'easeInOutQuad',
-    opacity: '0.3',
-    begin: function () {
-      t1 = performance.now()
-    },
-    complete: function () {
-      t2 = performance.now()
-      timeResolution.innerHTML = t2 - t1 + ' milisekund'
-    },
-    delay: function (el, i) { return i * 1000 },
-    autoplay: false
-  })
-    }
+  name: 'Container4',
+  methods: {
+    Slide: anime({
+      targets: 'div.box',
+      translateX: [
+        { value: 200, duration: 500 },
+        { value: 0, duration: 500 }
+      ],
+      rotate: {
+        value: '1turn',
+        easing: 'easeInOutSine'
+      },
+      borderRadius: ['0%', '50%'],
+      easing: 'easeInOutQuad',
+      opacity: '0.3',
+      begin: function () {
+        t1 = performance.now()
+      },
+      complete: function () {
+        t2 = performance.now()
+        timeResolution.innerHTML = t2 - t1 + ' milisekund'
+      },
+      delay: function (el, i) { return i * 1000 },
+      autoplay: false
+    })
+  }
 }
-document.querySelector('.slideButton').onclick = Slide.play
+document.querySelector('.slideButton').onclick = this.Slide.play
 </script>
