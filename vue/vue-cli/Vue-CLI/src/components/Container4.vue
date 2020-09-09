@@ -15,7 +15,7 @@
     </div>
 </template>
 
-<script>
+<!--<script>
 import anime from 'animejs'
 var t1
 var t2
@@ -49,4 +49,4 @@ export default {
   }
 }
 document.querySelector('.slideButton').onclick = this.Slide.play
-</script>
+</script>-->
