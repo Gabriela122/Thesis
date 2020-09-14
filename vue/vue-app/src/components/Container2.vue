@@ -19,7 +19,9 @@
 </template>
 
 <script>
+
 var time, result, i, j
+
 export default {
   name: 'Container2',
   methods: {

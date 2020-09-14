@@ -1,12 +1,5 @@
 import React, { Component } from 'react'
 
-//var timeResolution = document.querySelector('#timeResolution')
-//var resultDisplay = document.querySelector('#results')
-//var timeDisplay = document.querySelector('#timeRes')
-
-// 100000 losujemy 
-// 1000 rownan
-
 class Cont2 extends Component {
     constructor(props) {
         super(props)
@@ -45,7 +38,6 @@ class Cont2 extends Component {
             c = Math.floor(Math.random() * 101) - 50
             delta = Math.pow(b, 2) - (4 * a * c)
         } while (delta < 0 || a === 0)
-
         
         this.EachState({
             a: a,
@@ -54,8 +46,8 @@ class Cont2 extends Component {
             delta: delta
         })
         this.quadraticCalc(a,b,c,i,delta)
-
     }
+
     EachState(obiekt){
         this.setState(obiekt)
     }
@@ -70,7 +62,6 @@ class Cont2 extends Component {
             result1: result1,
             result2: result2
         })
-
         time += performance.now()
 
         if (i < 1001 && i > 1) {
@@ -151,4 +142,4 @@ class Cont2 extends Component {
     }
 }
 
-export default Cont2 
+export default Cont2

@@ -6,7 +6,6 @@ import Cont1 from "./container1"
 import Cont2 from "./container2"
 import Cont3 from "./container3"
 import Cont4 from "./container4"
-//import Anime from 'react-anime'
 
 class App extends Component {
     render() {

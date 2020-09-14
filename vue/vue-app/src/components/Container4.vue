@@ -1,7 +1,7 @@
 <template>
     <div>
         <div id="container4" class="cont"><h1>Animacje</h1>
-            <div id="btns"><!--byl but-->
+            <div id="btns">
                 <button class="slideButton" @click="Slide">Play</button>
             </div>
             <div class="box red"></div>
@@ -16,9 +16,11 @@
 </template>
 
 <script>
+
 import anime from 'animejs'
 var t1
 var t2
+
 export default {
   name: 'Container4',
   methods: {

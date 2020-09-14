@@ -12,7 +12,6 @@ class Cont3 extends Component {
             prob10000: null,
             wyniki: []
         }
-
         this.losuj = this.losuj.bind(this)
         this.sortNumber = this.sortNumber.bind(this)
         this.timePerformance = this.timePerformance.bind(this)
@@ -57,7 +56,7 @@ class Cont3 extends Component {
     }
 
 
-    formatowanie() { // siec->wylacz pamiec robocza 
+    formatowanie() {
         this.time0 = performance.now()
         var iloscPowtorzen = 10
         const domStyle = {
@@ -70,7 +69,6 @@ class Cont3 extends Component {
             </table>)
         }
         this.time1 = performance.now()
-
         return table
     }
 

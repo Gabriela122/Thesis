@@ -2,7 +2,6 @@ var prob10 = document.querySelector('#prob10')
 var prob100 = document.querySelector('#prob100')
 var prob10000 = document.querySelector('#prob10000')
 
-
 function losuj(rozmiar, zakres) {
     var los = []
     for (i = 0; i < rozmiar; i++) {
@@ -31,13 +30,12 @@ prob10.innerHTML = timePerformance(10, 100, 1000)
 prob100.innerHTML = timePerformance(100, 100, 1000)
 prob10000.innerHTML = timePerformance(10000, 100, 1000)
 
-var wyniki = [prob10,prob100,prob10000]
+var wyniki = [prob10, prob100, prob10000]
 
-
-function formatowanie() { // siec->wylacz pamiec robocza 
+function formatowanie() {
     time0 = performance.now()
     iloscPowtorzen = 10
-    for(var j = 0;j<iloscPowtorzen;j++){// zmieniac ilosc powtorzen na 10,100 i 10000
+    for (var j = 0; j < iloscPowtorzen; j++) {
         var table = document.createElement('table')
         table.style.border = '1px solid black'
         for (var i = 0; i < 3; i++) {
@@ -45,17 +43,13 @@ function formatowanie() { // siec->wylacz pamiec robocza
             var td = tr.insertCell()
             td.appendChild(document.createTextNode(wyniki[i].innerText))
             td.style.border = '1px solid black'
-    
+
         }
         document.getElementById("formatowanie").appendChild(table)
     }
-    
+
     time1 = performance.now()
 }
 
 formatowanie()
 document.querySelector("#czasFormatowania").innerHTML = time1 - time0 + ' milisekund'
-
-//sortowanie babelkowe https://eduinf.waw.pl/inf/alg/003_sort/m0004.php
-
-

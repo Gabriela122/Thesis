@@ -7,7 +7,7 @@ const Home = props => {
             <div id="home-cont">
                 <img src={zdj} alt="zdj1" className="zdj" />
                 <div className="text">
-                    <h1 className="header1">Cos o stronie </h1>
+                    <h1 className="header1">Lorem Ipsum</h1>
                     <p className="paragraph1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius dictum metus
                         quis aliquet. Cras ac convallis nisl, venenatis porttitor odio. Integer dictum est eget tortor
                         tristique, et fringilla enim vulputate. Nulla facilisi. Aliquam erat volutpat. Morbi ut lacus ac nisi
@@ -19,7 +19,5 @@ const Home = props => {
         </div>
     )
 }
-
-
 
 export default Home

@@ -1,4 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import anime from 'animejs/lib/anime.es';
 
 @Component({
@@ -48,5 +48,4 @@ export class Container4Component implements AfterViewInit {
   slideButton() {
     this.Slide.play()
   }
-
 }

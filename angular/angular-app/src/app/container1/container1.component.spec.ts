@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';//mozna usunac ten caly plik
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Container1Component } from './container1.component';
 

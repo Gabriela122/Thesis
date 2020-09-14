@@ -22,7 +22,9 @@
 </template>
 
 <script>
+
 var wyniki
+
 export default {
   name: 'Container3',
   methods: {
@@ -47,10 +49,10 @@ export default {
       }
       return time / iloscPowtorzen
     },
-    formatowanie () { // siec->wylacz pamiec robocza
+    formatowanie () {
       var time0 = performance.now()
       var iloscPowtorzen = 10
-      for (var j = 0; j < iloscPowtorzen; j++) { // zmieniac ilosc powtorzen na 10,100 i 10000
+      for (var j = 0; j < iloscPowtorzen; j++) {
         var table = document.createElement('table')
         table.style.border = '1px solid black'
         for (var i = 0; i < 3; i++) {

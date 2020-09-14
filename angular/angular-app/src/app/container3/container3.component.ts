@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-
 @Component({
     selector: 'app-container3',
     templateUrl: './container3.component.html',
@@ -18,9 +17,7 @@ export class Container3Component implements OnInit {
     @ViewChild('czasFormatowania', {static: true}) czasFormatowania: any
     @ViewChild('formatowanie', {static: true}) formatowanie: any
 
-    constructor() {
-        
-    }
+    constructor() {}
 
     ngOnInit(){
 
@@ -34,9 +31,6 @@ export class Container3Component implements OnInit {
 
         this.czasFormatowania.nativeElement.innerHTML = this.time1 - this.time0 + ' milisekund'
     }
-    
-
-    //initialization() {}
 
     losuj(rozmiar: number, zakres: number) {
         var los = []
@@ -62,11 +56,10 @@ export class Container3Component implements OnInit {
         return time / iloscPowtorzen
     }
 
-
-    formatowanieUI() { // siec->wylacz pamiec robocza 
+    formatowanieUI() { 
         this.time0 = performance.now()
         let iloscPowtorzen = 10
-        for (var j = 0; j < iloscPowtorzen; j++) {// zmieniac ilosc powtorzen na 10,100 i 10000
+        for (var j = 0; j < iloscPowtorzen; j++) {
             var table = document.createElement('table')
             table.style.border = '1px solid black'
             for (var i = 0; i < 3; i++) {
@@ -77,8 +70,6 @@ export class Container3Component implements OnInit {
             }
             this.formatowanie.nativeElement.appendChild(table)
         }
-
         this.time1 = performance.now()
     }
-
 }

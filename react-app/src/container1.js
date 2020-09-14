@@ -12,7 +12,7 @@ class Cont1 extends Component {
         this.textDisplay1 = this.textDisplay1.bind(this)
     }
 
-    textDisplay1 = async () => {//zrobic arrow w zwyklym js 
+    textDisplay1 = async () => {
         var t = performance.now()
         var txt2 = await textDisplay2()
 
@@ -33,12 +33,8 @@ class Cont1 extends Component {
                 <button type="button" onClick={this.textDisplay1}>
                     Asynchroniczność
                 </button>
-                <div id="tekst1" style={{ display: this.state.state1 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius
-                    dictum metus
-                    quis aliquet. Cras ac convallis nisl, venenatis</div><br /><br />
-                <div id="tekst2" style={{ display: this.state.state2 }}>ngilla enim vulputate. Nulla facilisi. Aliquam erat volutpat. Morbi ut
-                    lacus ac nisi
-                    efficitur tristique. Quisque inte</div>
+                <div id="tekst1" style={{ display: this.state.state1 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius dictum metus quis aliquet. Cras ac convallis nisl, venenatis</div><br /><br />
+                <div id="tekst2" style={{ display: this.state.state2 }}>ngilla enim vulputate. Nulla facilisi. Aliquam erat volutpat. Morbi ut lacus ac nisi efficitur tristique. Quisque inte</div>
                 <div id="asyncTime">{this.state.state3 ? this.state.state3 : ''}</div><br />
             </div>
         )

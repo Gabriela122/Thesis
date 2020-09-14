@@ -1,9 +1,9 @@
-
 var quadraticSolver = document.querySelector('#quadraticSolver')
 var timeResolution = document.querySelector('#timeResolution')
 var resultDisplay = document.querySelector('#results')
-var timeDisplay = document.querySelector('#timeRes') 
+var timeDisplay = document.querySelector('#timeRes')
 var time, result, i, j
+
 function quadraticEquation() {
     time = 0
     result = []
@@ -11,7 +11,6 @@ function quadraticEquation() {
         randomCoeff()
     }
     printResults()
-
 }
 
 function randomCoeff() {
@@ -41,15 +40,11 @@ function quadraticCalc(a, b, delta) {
             res2: result2,
             t: time
         }
-
         for (j = 0; j < i; j++) {
             result[i].t = result[i].t - result[j].t
         }
-
     }
-
 }
-
 
 function printResults() {
     timeResolution.innerHTML = time + ' millisekund'
@@ -71,10 +66,4 @@ function printResults() {
     const t2 = performance.now()
     timeDisplay.innerHTML = t2 - t1 + ' milisekund'
 }
-
 quadraticSolver.addEventListener('click', quadraticEquation())
-
-
-
-
-
