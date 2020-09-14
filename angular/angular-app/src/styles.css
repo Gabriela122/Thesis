@@ -131,7 +131,7 @@ button:active {
     overflow: auto;
 }
 
-#timeResolution {
+#asyncTime,#timeResolution {
     font-weight: bold;
 }
 
